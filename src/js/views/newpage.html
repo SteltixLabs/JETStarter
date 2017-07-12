@@ -1,0 +1,29 @@
+<div id="tabs-container">
+  <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', disabledTabs: disabledTabs()}">
+    <!-- tab bar -->
+    <ul>
+      <li><span>Tab 1</span></li>
+      <li><span>Tab 2</span></li>
+      <li><span>Tab 3</span></li>
+      <li><span>Tab 4</span></li>
+    </ul>
+
+    <!-- tab contents -->
+    <div id="tabs-1">
+      <p data-bind="text: count">Tab 1 Content</p>
+      <input type="button" data-bind="click: incrementCount" value="Increment"/>
+    </div>
+    <div id="tabs-2">
+      <p data-bind="text: count">Tab 2 Content</p>
+      <input type="button" data-bind="click: doubleCount" value="Double" />
+    </div>
+    <div id="tabs-3">
+      <p>Tab 3 Content</p>
+      <input type="button" data-bind="click: doStuff" />
+    </div>
+    <div id="tabs-4">
+      <p>Tab 4 Content</p>
+      <input type="button" data-bind="click: doStuff" />
+    </div>
+  </div>
+</div>

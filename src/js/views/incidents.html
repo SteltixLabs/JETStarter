@@ -1,0 +1,28 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h3>Incidents Content Area</h3>
+  <div>
+      To change the content of this section, you will make edits to the incidents.html file located in the /js/views folder.
+  </div>
+  <input type="text" data-bind="value: startDate" placeholder="Start date"/>
+  <input type="text" data-bind="value: endDate" placeholder="End date" />
+  <input type="button" data-bind="click: getSeries" />
+  
+  <div id='chart-container'>
+    <div id="lineChart" data-bind="ojComponent: {
+        component: 'ojChart', 
+        type: 'line',
+        series: lineSeriesValue, 
+        groups: lineGroupsValue, 
+        animationOnDisplay: 'auto',
+        animationOnDataChange: 'auto',
+        orientation: orientationValue,
+        hoverBehavior: 'dim'
+        }"
+         style="max-width:1000px;width:100%;height:750px;">
+    </div>
+</div>
+</div>

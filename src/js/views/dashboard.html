@@ -1,0 +1,32 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+    <h3>Currency</h3>
+  
+  <div data-bind="foreach: rates" id="currency">
+      <span data-bind="text: name"></span>
+      <span data-bind="text: items"></span>
+      <span> | </span>
+  </div>
+  
+    <input type="button" value="Get currency data" data-bind="click: fetchRates" />
+
+    <div id='chart-container' data-bind="visible: rates().length">
+      <div id="barChart" data-bind="ojComponent: {
+              component: 'ojChart', 
+              type: 'bar', 
+              orientation: orientationValue,
+              stack: stackValue,
+              series: barSeriesValue, 
+              groups: barGroupsValue, 
+              animationOnDisplay: 'auto',
+              animationOnDataChange: 'auto',
+              hoverBehavior: 'dim'
+          }"
+           style="max-width:750px;width:100%;height:750px;">
+      </div>
+      
+  </div>
+</div>
